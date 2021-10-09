@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-09-29 17:32:48
  * @LastEditors: Timothy
- * @LastEditTime: 2021-10-09 15:14:46
+ * @LastEditTime: 2021-10-09 16:22:49
  * @Description: 
  */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -22,7 +22,8 @@ module.exports = {
       name: "cart",
       // 当前模块具体导出的内容
       exposes:{
-        "./index": "./src/bootstrap.cart.js"
+        //! Attention! Duplicate names are not allowed for the current file name in the current webpack version
+        "./index": "./src/bootstrap.cart.js" 
       },
       shared: {
         faker:{
